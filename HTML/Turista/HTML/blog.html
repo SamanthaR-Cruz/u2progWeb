@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orizaba - Guía Turística</title>
+    <link rel="stylesheet" href="/CSS/styles_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+        }
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            padding: 30px;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: left 0.3s ease;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            transition: background 0.3s ease, padding-left 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            padding-left: 15px;
+        }
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+            text-align: justify;
+            flex-grow: 1;
+            width: 100%;
+            transition: margin-left 0.3s ease;
+        }
+        header {
+          
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav ul li {
+            display: inline;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+        }
+
+        .content.active {
+            margin-left: 400px;
+            text-align: center;
+            
+        }
+
+        .sidebar.active, .sidebar.wide {
+            left: 0;
+            padding: 20px;
+        }
+        .content.active, .content.wide {
+            margin-left: 280px;
+            text-align: center;
+            width: calc(100% - 250px);
+        }
+        section {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a11cb;
+        }
+        @media screen and (min-width: 1024px) {
+            .sidebar {
+                left: 0;
+            }
+            .content {
+                text-align: center;
+                margin-left: 300px;
+                width: calc(100% - 250px);
+            }
+            .menu-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    <div class="sidebar" id="sidebar">
+        <h2>Guía de Orizaba </br> Blog</h2>
+        <ul>
+           
+            <li><a href="/HTML/entrada.html"><i class="fas fa-map-marker-alt"></i> Entrada</a></li>
+            <li><a href="/HTML/comentarios.html"><i class="fas fa-map"></i> Comentarios</a></li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+       
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="/HTML/guia.html"><i class="fas fa-comments"></i> Guia</a></li>
+                </ul>
+            </nav>
+      
+        <div style="margin-top: 0px;">
+            <h1>Bienvenido al Blog</h1>
+            <p style="text-align: justify; padding: 30px; color: #333;">Orizaba, la "Ciudad de las Aguas Alegres", es un destino lleno de historia, cultura y paisajes impresionantes. Ubicada en el corazón de Veracruz, esta joya escondida cautiva con su arquitectura colonial, sus montañas majestuosas y su vibrante vida cultural.
+            </br> Desde el momento en que llegas, el aire fresco de la montaña te envuelve y el imponente Pico de Orizaba, la montaña más alta de México, se asoma en el horizonte. Un paseo por el centro histórico revela tesoros como el Palacio de Hierro, diseñado por Gustave Eiffel, y la majestuosa Catedral de San Miguel Arcángel.</p>
+            <p style="text-align: justify;  padding: 30px; color: #333;">Pero la verdadera magia de Orizaba está en su gente y en la calidez con la que recibe a cada visitante. </br> <strong>¿Listo para vivir esta experiencia?.</strong> </p>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("content").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

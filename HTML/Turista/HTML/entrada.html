@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orizaba - Guía Turística</title>
+    <link rel="stylesheet" href="/CSS/styles_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+        }
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            padding: 30px;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: left 0.3s ease;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            transition: background 0.3s ease, padding-left 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            padding-left: 15px;
+        }
+        .content {
+            text-align: center;
+            margin-left: 60px;
+            padding: 20px;
+            text-align: justify;
+            flex-grow: 1;
+            width: 100%;
+            transition: margin-left 0.3s ease;
+        }
+       
+header {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    color: rgb(44, 44, 44);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background: #4CAF50;
+    border-radius: 10px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #E91E63;
+    color: white;
+}
+
+nav ul li a i {
+    font-size: 1.5rem;
+}
+
+        .menu-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+        }
+
+        .content.active {
+            margin-left: 400px;
+            text-align: center;
+            
+        }
+
+        .sidebar.active, .sidebar.wide {
+            left: 0;
+            padding: 20px;
+        }
+        .content.active, .content.wide {
+            margin-left: 280px;
+            text-align: center;
+            width: calc(100% - 250px);
+        }
+        section {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        @media screen and (min-width: 1024px) {
+            .sidebar {
+                left: 0;
+            }
+            .content {
+                text-align: center;
+                margin-left: 300px;
+                width: calc(100% - 250px);
+            }
+            .menu-btn {
+                display: none;
+            }
+        }
+
+        .blog-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #4a0f93);
+
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.blog-entry {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.entry-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.entry-summary {
+    font-size: 16px;
+    text-align: justify;
+}
+
+    </style>
+</head>
+<body>
+
+  
+
+    <button class="menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    <div class="sidebar" id="sidebar">
+        <h2>Guía de Orizaba </br> Blog</h2>
+        <ul>
+           
+          
+            <li><a href="/HTML/comentarios.html" class="fas fa-map"></i> Comentarios</a></li>
+            <li><a href="/HTML/entrada.html"><i class="fas fa-envelope"></i> Entrada</a></li>
+           
+        </ul>
+    </div>
+    <div class="content" id="content">
+       
+    
+  
+    <div style="margin-top: 0px;">
+        
+
+        <nav  style="background-color:rgb(125, 55, 157)">
+          
+            <ul  style="background-color:rgb(84, 9, 103)">
+                
+              <li><a href="/index.html"><i class="fas fa-mountain"></i> Inicio</a></li>
+              <li><a href="/HTML/blog.html"><i class="fas fa-ticket-alt"></i> Blog</a></li>
+
+
+            </ul>
+        </nav>
+
+        <h1 style="color:#252424; text-align: center;">ENTRADA</p>
+         
+    
+</div>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+        document.getElementById("content").classList.toggle("active");
+    }
+</script>
+
+<div class="blog-container">
+    <h2>Entradas del Blog</h2>
+
+    <dl class="blog-entry">
+        <dt class="entry-title">Descubriendo Orizaba</dt>
+        <dd class="entry-summary">Orizaba es un tesoro escondido en Veracruz, con vistas espectaculares, historia fascinante y experiencias turísticas inolvidables. Desde el majestuoso teleférico hasta el río que serpentea la ciudad, cada rincón tiene algo especial que ofrecer.</dd>
+    </dl>
+
+    <dl class="blog-entry">
+        <dt class="entry-title">Rutas y Consejos para Viajar a Orizaba</dt>
+        <dd class="entry-summary">Descubre las mejores rutas para llegar a Orizaba y optimizar tu experiencia. Recomendaciones de transporte, hospedaje y actividades imperdibles para disfrutar al máximo esta joya de Veracruz.</dd>
+    </dl>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Samantha</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .menu li {
+            margin: 20px 0;
+            padding: 15px;
+            width: 250px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu li:nth-child(1) { background: linear-gradient(135deg, #d7216d, #d35892); }
+        .menu li:nth-child(2) { background: linear-gradient(135deg, #650f87, #a65fc2); }
+        .menu li:nth-child(3) { background: linear-gradient(135deg, #df6234, #f5a96b); }
+        .menu li:nth-child(4) { background: linear-gradient(135deg, #118228, #7ab967); }
+        .menu li:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyectos Samantha</h1>
+    </header>
+    <ul class="menu">
+        <li><a href="/HTML/Practica1.html" target="_blank">Curriculum</a></li>
+        <li><a href="/HTML/Evolucion Web/index2.html" target="_blank">Historia Web</a></li>
+        <li><a href="/HTML/Proyecto/Index.html" target="_blank">Blog</a></li>
+        <li><a href="/HTML/Turista/index.html" target="_blank">Gu&iacutea Tur&iacutestica</a></li>
+    </ul>
+    <footer>
+        &copy; 2025 Proyectos Samantha. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

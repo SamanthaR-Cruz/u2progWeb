@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Inicio - Aplicaciones Web</title> 
+    <style> 
+      
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            background:  rgb(18, 17, 17);
+            text-align: center;
+            color: #ffffff;
+        } 
+        
+        nav { 
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(24px); /* Agrega desenfoque */
+            font-family: 'Poppins Light', sans-serif; 
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a { 
+            text-decoration: none; 
+            color: #ffffff; 
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        } 
+        
+        nav a:hover {
+            color: #ca5394;
+        }
+        
+        header { 
+            font-family: 'Poppins Light', sans-serif; 
+            padding: 50px 10px;
+            background: linear-gradient(135deg, #9f176d, #82295d, #1e095b );
+            text-align: center;
+        } 
+        
+        header h1 { 
+            font-size: clamp(20px, 5vw, 40px);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+        } 
+        
+        header h2 { 
+            font-size: clamp(10px, 3vw, 20px);
+            font-weight: 300;
+            color: #c0bfbd;
+            text-shadow: 
+        0 0 1px #ffffff, 
+        0 0 3px #c0bfbd, 
+        0 0 30px #ca5394, 
+        0 0 50px #ca5394, 
+        0 0 100px #82295d; 
+            backdrop-filter: blur(30px); 
+            border-radius: 20px;
+            padding: 20px, 20px;
+            
+
+        }
+        
+        section {
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            background: #242424;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 2);
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #329fc3;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0px 4px 6px #2e2e2e;
+            margin-top: 0px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #2355a0;
+            transform: scale(1.1);
+            color:#fffdfa;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .icon-box {
+            width:500px;
+            height: 300px;
+            background-color: #48034d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .icon-box:hover {
+            transform: scale(1.1);
+           
+        }
+
+        .small-text {
+    font-size: 14px;
+    display: block;
+    text-align: justify;  
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px; 
+       }
+        
+       .highlight {
+    font-size: 34px; 
+    text-shadow: #329fc3;
+    background-color: #dbdbdb;
+    padding: 2px 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    color: #fdffff;
+
+    }
+    </style> 
+</head> 
+<body> 
+    <nav> 
+        <a href="index.html">Inicio</a> 
+        <a href="historia.html">Historia Web</a> 
+        <a href="cv.html">CV</a> 
+    </nav> 
+    
+    <header> 
+        <h1>DEL CÓDIGO ESTÁTICO A LA <br> INTELIGENCIA ARTIFICIAL</h1> 
+        <h2><strong>UN VIAJE EN EL TIEMPO</strong></h2> 
+       
+    </header> 
+    
+
+    <p style="color: #868686;  font-size: 15px;"> Conocer el pasado te prepara para el futuro... </p>
+    <a href="historia.html" class="button">  ¡Descubre más!</a>
+   
+    <div class="icon-container">
+        <div class="icon-box" style=" background: linear-gradient(135deg, #21002b, #310147, #1e095b );">
+            <p><span class="highlight"> ANTES </span><br>
+           <span class="small-text"> Las páginas web eran estáticas, con solo texto e imágenes.  
+            No había interacción con el usuario, y cada cambio requería modificar el código manualmente. </span> </p>
+        </div>
+    
+        <div class="icon-box" style=" background: linear-gradient(135deg, #070029, #02246d, #0d2fa1 );">
+            <p><span class="highlight" style="color: #ffffff;"> AHORA </span><br>
+                <span class="small-text">Las páginas son dinámicas, con contenido interactivo.  
+                    Tecnologías como JavaScript, APIs y la IA permiten experiencias personalizadas.</span></p>
+        </div>
+    </div>
+    
+
+    <section> 
+        <p style="font-size: 24px"><strong>DESDE LAS PRIMERAS P&AacuteGINAS EST&AacuteTICAS HASTA LA WEB 3.0</strong> <br> </p>  <span style="font-size: 18px, text-align: justify"  > La evolución de la historia web ha transformado la forma en la que interactuamos, compartimos información y creamos contenido. Descubre cómo la tecnología ha dado forma al internet que usamos hoy.</span> 
+     </section> 
+
+     <div>
+        !Qu&eacute esperas, sum&eacutergete en este mundo y suscríbete para enterarte de todo lo nuevo!
+        
+     </div>
+
+     <a href="historia.html">Historia</a>
+        <a href="historia.html">Suscrubirse</a>
+</body> 
+</html>
